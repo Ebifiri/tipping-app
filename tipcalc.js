@@ -38,11 +38,23 @@ theme_check();
 function calculateTip(percentage) {
     var bill = document.querySelector(".bill").value;
     var people = document.querySelector(".people").value;
-    var tip = (bill * percentage) / 100;
-    var tip_person = tip / people;
-    var total_person = (bill / people) + tip_person;
-    document.querySelector(".tip").value = "$" + tip_person.toFixed(2);
-    document.querySelector(".total").value = "$" + total_person.toFixed(2);
+    if (bill > 0 && people > 0 && (percentage > 0 && percentage < 100)) {
+        var tip = (bill * percentage) / 100;
+        var tip_person = tip / people;
+        var total_person = (bill / people) + tip_person;
+        document.querySelector(".tip").value = "$" + tip_person.toFixed(2);
+        document.querySelector(".total").value = "$" + total_person.toFixed(2);
+    }
+    else{
+        alert("Invalid values or empty fields");
+    }
+    
+}
+
+function toggleForm() {
+    var form = document.getElementById("form-container");
+    form.classList.toggle("hidden");
+    form.classList.toggle("block");
 }
 
 document.querySelector(".reset").addEventListener("click", clear);
@@ -51,4 +63,5 @@ function clear() {
   document.querySelector(".people").value = "";
   document.querySelector(".tip").value = "";
   document.querySelector(".total").value = "";
+  document.querySelector(".custom").value = "";
 }
