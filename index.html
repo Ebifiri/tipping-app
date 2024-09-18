@@ -49,7 +49,8 @@
     </section>
     <div class="flex flex-col container items-center">
         <section class="pt-32 lg:pt-16 pr-5 md:pr-10 xl:pl-24">
-            <img src="assets/logo.svg" class="w-24">
+            <img src="assets/logo.svg" class="w-24 light-logo dark:hidden">
+            <img src="assets/logo dark.svg" class="w-24 dark-logo hidden dark:block">
         </section>
         <section class="bg-white dark:bg-zinc-800 dark:outline-double dark:outline-offset-2 dark:outline-2 dark:outline-purple-800 rounded-xl mx-3.5 mb-20 lg:mb-0 md:ml-3 xl:ml-32 mt-24 w-fit shadow-2xl">
             <section class="flex flex-col lg:flex-row">
@@ -85,7 +86,7 @@
                         </button>
                     </div>
                     <section id="form-container" class="hidden flex bg-vlight-grayish-cyan dark:bg-zinc-900 rounded md:ml-56 w-40 md:w-24">
-                        <input type="number" class="custom bg-transparent rounded ml-2 w-full outline-none font-mono font-bold p-2 text-dark-cyan dark:text-purple-700 text-right text-2xl" oninput="calculateTip(this.value)" placeholder="">
+                        <input type="number" class="custom bg-transparent rounded ml-2 w-full outline-none font-mono font-bold p-2 text-dark-cyan dark:text-purple-700 text-right text-2xl" oninput="calculateTip(this.value)" placeholder="0">
                     </section>
                     <p class="dark:text-purple-700 font-mono font-lg font-bold pl-8 mt-2">Number of People</p>
                     <form class="flex items-center bg-vlight-grayish-cyan dark:bg-zinc-900 rounded ml-7 w-40 md:w-80">
