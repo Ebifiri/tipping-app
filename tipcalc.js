@@ -60,7 +60,7 @@ function toggleForm() {
 document.querySelector(".reset").addEventListener("click", clear);
 function clear() {
   document.querySelector(".bill").value = "";
-  document.querySelector(".people").value = "";
+  document.querySelector(".people").value = 1;
   document.querySelector(".tip").value = "";
   document.querySelector(".total").value = "";
   document.querySelector(".custom").value = "";
