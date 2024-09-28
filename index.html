@@ -48,11 +48,11 @@
         </button>
     </section>
     <div class="flex flex-col container items-center">
-        <section class="pt-32 lg:pt-16 pr-5 md:pr-10 xl:pl-24">
+        <section class="pt-32 lg:pt-16 pr-5 md:pr-10 xl:pl-24 2xl:pl-80">
             <img src="assets/logo.svg" class="w-24 light-logo dark:hidden">
             <img src="assets/logo dark.svg" class="w-24 dark-logo hidden dark:block">
         </section>
-        <section class="bg-white dark:bg-zinc-800 dark:outline-double dark:outline-offset-2 dark:outline-2 dark:outline-purple-800 rounded-xl mx-3.5 mb-20 lg:mb-0 md:ml-3 xl:ml-32 mt-24 w-fit shadow-2xl">
+        <section class="bg-white dark:bg-zinc-800 dark:outline-double dark:outline-offset-2 dark:outline-2 dark:outline-purple-800 rounded-xl mx-3.5 mb-20 lg:mb-0 md:ml-3 xl:ml-32 2xl:ml-80 mt-24 w-fit shadow-2xl">
             <section class="flex flex-col lg:flex-row">
                 <section class="flex flex-col">
                     <label class="dark:text-purple-700 font-mono font-lg font-bold pt-6 pl-8">Bill</label>
@@ -72,7 +72,7 @@
                         <button class="bg-dark-cyan dark:bg-purple-800 h-10 w-20 md:w-auto rounded shadow-xl hover:bg-cyan hover:drop-shadow-xl focus:bg-cyan" onclick="calculateTip(10)">
                             <p class="per2 text-white font-mono font-bold hover:text-dark-cyan focus:text-dark-cyan">10%</p>
                         </button>
-                        <button class="bg-dark-cyan dark:bg-purple-800 h-10 w-20 md:w-auto rounded shadow-xl hover:bg-cyan hover:drop-shadow-xl focus:bg-cyan" onclick="calculateTip(15)">
+                        <button class="bg-dark-cyan dark:bg-zinc-900 h-10 w-20 md:w-auto rounded shadow-xl hover:bg-cyan hover:drop-shadow-xl focus:bg-cyan focus:dark:outline-2 focus:dark:outline-purple-800" onclick="calculateTip(15)">
                             <p class="per3 text-white font-mono font-bold hover:text-dark-cyan focus:text-dark-cyan">15%</p>
                         </button>
                         <button class="bg-dark-cyan dark:bg-purple-800 h-10 w-20 md:w-auto rounded shadow-xl hover:bg-cyan hover:drop-shadow-xl focus:bg-cyan" onclick="calculateTip(25)">
@@ -81,12 +81,15 @@
                         <button class="bg-dark-cyan dark:bg-purple-800 h-10 w-20 md:w-auto rounded shadow-xl hover:bg-cyan hover:drop-shadow-xl focus:bg-cyan" onclick="calculateTip(50)">
                             <p class="per5 text-white font-mono font-bold hover:text-dark-cyan focus:text-dark-cyan">50%</p>
                         </button>
-                        <button class="bg-vlight-grayish-cyan h-10 w-20 md:w-auto rounded shadow-xl hover:bg-cyan hover:drop-shadow-xl focus:bg-cyan" onclick="toggleForm()">
+                        <button class="bg-vlight-grayish-cyan h-10 w-20 md:w-auto rounded shadow-xl hover:bg-cyan hover:drop-shadow-xl focus:bg-cyan dark:bg-zinc-900 dark:focus:outline-2 dark:focus:outline-offset-2 dark:focus:outline-purple-800" onclick="toggleForm()">
                             <p class="text-dark-grayish-cyan font-mono font-bold text-lg hover:text-dark-cyan focus:text-dark-cyan">Custom</p>
                         </button>
                     </div>
-                    <section id="form-container" class="hidden flex bg-vlight-grayish-cyan dark:bg-zinc-900 rounded md:ml-56 w-40 md:w-24">
-                        <input type="number" class="custom bg-transparent rounded ml-2 w-full outline-none font-mono font-bold p-2 text-dark-cyan dark:text-purple-700 text-right text-2xl" oninput="calculateTip(this.value)" placeholder="0">
+                    <section id="form-container" class="hidden flex flex-col">
+                        <label class="dark:text-purple-700 font-mono font-lg font-bold pl-8">Custom %</label>
+                        <form class="flex items-center bg-vlight-grayish-cyan dark:bg-zinc-900 rounded ml-7 w-40 md:w-80">
+                            <input type="number" class="custom bg-transparent rounded ml-2 w-full outline-none font-mono font-bold p-2 text-dark-cyan dark:text-purple-700 text-right text-2xl" oninput="calculateTip(this.value)" placeholder="0">
+                        </form>
                     </section>
                     <p class="dark:text-purple-700 font-mono font-lg font-bold pl-8 mt-2">Number of People</p>
                     <form class="flex items-center bg-vlight-grayish-cyan dark:bg-zinc-900 rounded ml-7 w-40 md:w-80">
